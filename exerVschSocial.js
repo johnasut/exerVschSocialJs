@@ -2,15 +2,15 @@ var conventionCollective = {
     fName: "James",
     lName: "Kirk",
     age: 45,
-    favoriteGenres: ["Sci-Fi", "Fantasy"],
+    favoriteGenres: ["Sci-Fi", "Fantasy", "DoTerra"],
     conventionsAttending: [
         {
             conName: "Gencon",
             dates: [
                 {
-                    registrationCloses: date(2021, 08, 15)
-                    startDate: date(2021, 09, 10),
-                    endDate: date(2021, 09, 15),
+                    registrationCloses: Date(2021, 08, 15),
+                    startDate: Date(2021, 09, 10),
+                    endDate: Date(2021, 09, 15),
                 }
             ],
             city: "Provo",
@@ -31,9 +31,9 @@ var conventionCollective = {
             conName: "Trekcon",
             dates: [
                 {
-                    registrationCloses: date(2021, 01, 31)
-                    startDate: date(2021, 03, 01),
-                    endDate: date(2021, 06, 15),
+                    registrationCloses: Date(2021, 01, 31),
+                    startDate: Date(2021, 03, 01),
+                    endDate: Date(2021, 06, 15),
                 }
             ],
             city: "San Diego",
@@ -55,3 +55,7 @@ var conventionCollective = {
         return "Hi. I'm " + this.fName + ". I'm looking for someone to go to " + this.favoriteGenres + " conventions with.";
     },
 }
+
+conventionCollective.lfgCall();
+conventionCollective.favoriteGenres.push("Horror", "The Pampere Chef");
+conventionCollective.lfgCall();
